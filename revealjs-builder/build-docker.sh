@@ -15,4 +15,3 @@ git clone https://github.com/osones/reveal.js revealjs
 cd revealjs
 git checkout osones
 cp -v /formations/docker-s3/index.html /formations/latex/docker/revealjs/index.html
-ls revealjs/
