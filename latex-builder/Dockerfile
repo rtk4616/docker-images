@@ -5,7 +5,8 @@ MAINTAINER Osones <rgu@osones.io>
 RUN apt update \
     && apt upgrade -yf \
     && apt install -y \
-    texlive-full \
-    build-essential
+    texlive \
+    texlive-lang-french \
+    make
 
 ADD build-openstack.sh /build-openstack.sh
