@@ -1,14 +1,18 @@
 FROM ubuntu:14.04
 
-MAINTAINER Osones <rgu@osones.io>
+MAINTAINER Osones <docker@osones.io>
 
-RUN apt update \
-    && apt upgrade -yf \
-    && apt install -y \
-    pandoc \
+ENV PKGVER 1.16.0.2
+
+RUN apt update && apt install -y \
     wget \
-    git
-RUN wget https://github.com/jgm/pandoc/releases/download/1.16.0.2/pandoc-1.16.0.2-1-amd64.deb
-RUN dpkg -i pandoc-1.16.0.2-1-amd64.deb
+    git \
+    pandoc \
+    && wget https://github.com/jgm/pandoc/releases/download/"$PKGVER"/pandoc-"$PKGVER"-1-amd64.deb -P /tmp \
+    && dpkg -i /tmp/pandoc-"$PKGVER"-1-amd64.deb \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 ADD build-docker.sh /build-docker.sh
+
+ENTRYPOINT ["/build-docker.sh"]
