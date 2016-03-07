@@ -14,5 +14,6 @@ RUN apt update && apt install -y \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 ADD build-docker.sh /build-docker.sh
+RUN chmod +x /build-docker.sh
 
 ENTRYPOINT ["/build-docker.sh"]
