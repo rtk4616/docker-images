@@ -15,6 +15,7 @@ git clone https://github.com/osones/reveal.js revealjs
 cd revealjs
 git checkout osones
 cp -v /formations/docker-s3/index.html /formations/latex/docker/revealjs/index.html
+cp -rv /formations/images /formations/latex/docker/revealjs/
 
 # OpenStack
 # Only testing for now
@@ -27,3 +28,4 @@ git clone https://github.com/osones/reveal.js revealjs
 cd revealjs
 git checkout osones
 cp -v /formations/openstack-html-s3/index.html /formations/latex/openstack/revealjs/index.html
+cp -rv /formations/images /formations/latex/openstack/revealjs/
