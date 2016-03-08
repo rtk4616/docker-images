@@ -18,7 +18,7 @@ git clone https://github.com/hakimel/reveal.js.git revealjs
 cp  /formations/cours/docker/output-html/index.html /formations/cours/docker/revealjs/index.html
 cp -r /formations/images /formations/cours/docker/revealjs/
 cp /formations/cours/styles/osones.css /formations/cours/docker/revealjs/css/theme/osones.css
-
+cp -r /formations/cours/docker/revealjs/css /formations/cours/docker/output-html/
 
 # OpenStack
 
@@ -33,3 +33,4 @@ git clone https://github.com/hakimel/reveal.js.git revealjs
 cp /formations/cours/openstack/output-html/index.html /formations/cours/openstack/revealjs/index.html
 cp -r /formations/images /formations/cours/openstack/revealjs/
 cp /formations/cours/styles/osones.css /formations/cours/docker/revealjs/css/theme/osones.css
+cp -r /formations/cours/openstack/revealjs/css /formations/cours/openstack/output-html/
