@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -xe
 
 cd /formations/cours/openstack
 mkdir -v output-pdf

@@ -1,12 +1,16 @@
 FROM ubuntu:14.04
 
-MAINTAINER Osones <rgu@osones.io>
+MAINTAINER Osones <docker@osones.io>
 
-RUN apt update \
-    && apt upgrade -yf \
-    && apt install -y \
+RUN apt update && apt install -y \
     texlive \
     texlive-lang-french \
-    make
+    make \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 ADD build.sh /build.sh
+
+RUN chmod +x /build.sh
+
+ENTRYPOINT ["/build.sh"]
