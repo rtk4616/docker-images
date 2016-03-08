@@ -1,9 +1,6 @@
 #!/bin/bash
 
-
-cd /formations
-
-mkdir -v openstack-s3
+cd /formations/cours/openstack
+mkdir -v output-pdf
 make course=openstack
-mv -v result/*.pdf openstack-s3/
-
+mv -v result/*.pdf output-pdf/
