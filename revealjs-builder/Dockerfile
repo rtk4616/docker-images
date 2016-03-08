@@ -14,6 +14,7 @@ RUN apt update && apt install -y \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 ADD build.sh /build.sh
+
 RUN chmod +x /build.sh
 
 ENTRYPOINT ["/build.sh"]
