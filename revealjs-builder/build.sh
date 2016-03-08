@@ -17,7 +17,7 @@ git clone https://github.com/hakimel/reveal.js.git revealjs
 
 cp  /formations/cours/docker/output-html/index.html /formations/cours/docker/revealjs/index.html
 cp -r /formations/images /formations/cours/docker/revealjs/
-cp /formations/cours/styles/osones.css /formations/cours/docker/revealsjs/css/theme/osones.css
+cp /formations/cours/styles/osones.css /formations/cours/docker/revealjs/css/theme/osones.css
 
 
 # OpenStack
