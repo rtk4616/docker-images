@@ -32,4 +32,4 @@ git clone https://github.com/hakimel/reveal.js.git revealjs
 
 cp /formations/cours/openstack/output-html/index.html /formations/cours/openstack/revealjs/index.html
 cp -r /formations/images /formations/cours/openstack/revealjs/
-cp /formations/cours/styles/osones.css /formations/cours/docker/revealsjs/css/theme/osones.css
+cp /formations/cours/styles/osones.css /formations/cours/docker/revealjs/css/theme/osones.css
