@@ -15,9 +15,9 @@ pandoc slide -t revealjs -f markdown -s -o output-html/index.html --slide-level 
 
 git clone https://github.com/hakimel/reveal.js.git revealjs
 
-cp -v /formations/cours/docker/output-html/index.html /formations/cours/docker/revealjs/index.html
-cp -rv /formations/images /formations/cours/docker/revealjs/
-cp -rv /formation/cours/styles/osones.css /formation/cours/docker/revealsjs/css/theme/osones.css
+cp  /formations/cours/docker/output-html/index.html /formations/cours/docker/revealjs/index.html
+cp -r /formations/images /formations/cours/docker/revealjs/
+cp /formations/cours/styles/osones.css /formations/cours/docker/revealsjs/css/theme/osones.css
 
 
 # OpenStack
@@ -30,6 +30,6 @@ pandoc slide -t revealjs -f markdown -s -o output-html/index.html --slide-level 
 
 git clone https://github.com/hakimel/reveal.js.git revealjs
 
-cp -v /formations/cours/openstack/output-html/index.html /formations/cours/openstack/revealjs/index.html
-cp -rv /formations/images /formations/cours/openstack/revealjs/
-cp -rv /formation/cours/styles/osones.css /formation/cours/docker/revealsjs/css/theme/osones.css
+cp /formations/cours/openstack/output-html/index.html /formations/cours/openstack/revealjs/index.html
+cp -r /formations/images /formations/cours/openstack/revealjs/
+cp /formations/cours/styles/osones.css /formations/cours/docker/revealsjs/css/theme/osones.css
