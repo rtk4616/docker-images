@@ -13,7 +13,7 @@ RUN apt update && apt install -y \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-ADD build-docker.sh /build-docker.sh
-RUN chmod +x /build-docker.sh
+ADD build.sh /build.sh
+RUN chmod +x /build.sh
 
-ENTRYPOINT ["/build-docker.sh"]
+ENTRYPOINT ["/build.sh"]

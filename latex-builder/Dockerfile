@@ -9,4 +9,4 @@ RUN apt update \
     texlive-lang-french \
     make
 
-ADD build-openstack.sh /build-openstack.sh
+ADD build.sh /build.sh
