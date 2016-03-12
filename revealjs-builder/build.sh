@@ -5,11 +5,9 @@ IMG_DIR=/formations/images
 LIST=/formations/cours/list.md
 
 git clone https://github.com/hakimel/reveal.js.git $COURS_DIR/revealjs
+mkdir $COURS_DIR/output-html
 
-while line; do
-    cours=$(echo $line | cut -d; -f1)
-    modules=$(echo $line | cut -d; -f2)
-    mkdir $COURS_DIR/output-html
+while IFS=: read cours modules; do
     for module in $(echo $modules); do
         cat $COURS_DIR/$module >> $COURS_DIR/slide-$cours
     done
