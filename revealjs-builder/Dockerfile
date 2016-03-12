@@ -17,4 +17,4 @@ ADD build.sh /build.sh
 
 RUN chmod +x /build.sh
 
-ENTRYPOINT ["/build.sh"]
+CMD ["/build.sh"]
