@@ -10,6 +10,8 @@ while IFS=: read cours modules; do
     for module in $modules; do
         cat $COURS_DIR/$module >> $COURS_DIR/slide-$cours
     done
+    sed 's/^## /### /' slide-$cours > tmp_slide-$cours
+    mv tmp_slide-$cours slide-$cours
     pandoc $COURS_DIR/slide-$cours -t revealjs -f markdown -s -o $COURS_DIR/output-html/"$cours".html --slide-level 3 -V theme=osones -V navigation=frame -V revealjs-url="http://formation.osones.com/revealjs" -V slideNumber="true"
 done < $LIST
 
