@@ -1,0 +1,9 @@
+etherpad:
+    image: osones/etherpad:alpine
+revproxy:
+    image: osones/nginx:revproxy-auth
+    links:
+        - etherpad:etherpad
+    ports:
+        - "80:80"
+        - "443:443"
