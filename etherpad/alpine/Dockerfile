@@ -8,10 +8,10 @@ RUN apk -U add \
     git \
     curl \
     nodejs \
-    && git clone git://github.com/ether/etherpad-lite.git
+    && git clone git://github.com/ether/etherpad-lite.git /etherpad
 
 EXPOSE 9001
 
-WORKDIR etherpad-lite
+WORKDIR /etherpad
 
 CMD ["bin/run.sh", "--root"]
