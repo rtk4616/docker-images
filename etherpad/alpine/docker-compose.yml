@@ -1,7 +1,11 @@
 etherpad:
   image: osones/etherpad:alpine
+  volumes:
+    - /home/core/pad_osones_com_volume:/etherpad/var
 revproxy:
   image: osones/nginx:revproxy-auth
+  volumes:
+    - /home/core/nginx/certs:/etc/nginx/certs
   links:
     - etherpad:etherpad
   ports:
