@@ -8,6 +8,8 @@ revproxy:
     - /home/core/nginx/certs:/etc/nginx/certs
   links:
     - etherpad:etherpad
+  env_file:
+    - /home/core/creds.env
   ports:
     - "80:80"
     - "443:443"
