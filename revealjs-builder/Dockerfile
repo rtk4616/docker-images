@@ -16,6 +16,4 @@ RUN apt update && apt install -y \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-ENTRYPOINT ["pandoc"]
-
-CMD ["-t", "revealjs", "-f", "markdown", "-s", "--slide-level", "3", "-V", "theme=osones", "-V", "navigation=frame", "-V", "revealjs-url=https://osones.com/revealjs", "-V", "slideNumber=true"]
+ENTRYPOINT ["pandoc", "-t", "revealjs", "-f", "markdown"]
