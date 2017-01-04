@@ -12,7 +12,7 @@ while IFS=: read cours modules; do
     done
     sed 's/^## /### /' $COURS_DIR/slide-$cours > tmp_slide-$cours
     mv tmp_slide-$cours $COURS_DIR/slide-$cours
-    pandoc $COURS_DIR/slide-$cours -t revealjs -f markdown -s -o /formations/output-html/"$cours".html --slide-level 3 -V theme=osones -V navigation=frame -V revealjs-url="http://formation.osones.com/revealjs" -V slideNumber="true"
+    pandoc $COURS_DIR/slide-$cours -t revealjs -f markdown -s -o /formations/output-html/"$cours".html --slide-level 3 -V theme=osones -V navigation=frame -V revealjs-url="https://osones.com/revealjs" -V slideNumber="true"
 done < $LIST
 
 # cp into output-html/ for push to S3
